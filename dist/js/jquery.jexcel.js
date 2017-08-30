@@ -2210,11 +2210,11 @@ var methods = {
         var options = $.fn.jexcel.defaults[id];
 
         // Global Configuration
-        if (options.allowDeleteRow == true) {
+        if (options.allowDeleteRow === true) {
             // Id
             var id = $(this).prop('id');
 
-            if (parseInt(lineNumber) > -1) {
+            if (parseInt(lineNumber) > 0) {
                 // Remove from source
                 $.fn.jexcel.defaults[id].data.splice(parseInt(lineNumber), 1);
                 // Update table
